@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  accounts:
+    image: halitkalayci/accountservice
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - halitkalayci/network
+
+  loans:
+    image: halitkalayci/loansservice
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - halitkalayci/network
+
+networks:
+  halitkalayci/network:
+
